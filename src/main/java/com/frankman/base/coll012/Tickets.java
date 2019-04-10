@@ -28,6 +28,8 @@ public class Tickets {
 //			tickets.remove(20);
 //		}
 		
+		
+		
 		for(int i = 1; i <=10; i ++){
 			new Thread("线程"+i){
 				public void run(){
