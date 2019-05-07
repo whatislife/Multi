@@ -2,7 +2,13 @@ package com.frankman.base.conn008;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 
+* @ClassName: ListAdd1  
+* <p>Description: volatile线程间通信基础版本    </p>
+* @date 2019年5月5日 下午4:15:04  
+*
+ */
 public class ListAdd1 {
 
 	
@@ -45,7 +51,7 @@ public class ListAdd1 {
 				}
 			}
 		}, "t2");		
-		
+
 		t1.start();
 		t2.start();
 	}

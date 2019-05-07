@@ -7,9 +7,15 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 /**
- * wait notfiy 方法，wait释放锁，notfiy不释放锁
- * @author alienware
- *
+ * 
+* @ClassName: ListAdd2  
+* <p>Description: 线程间通信基础版本升级 几种方式 
+* 1.使用wait notify 和synchronized 配合使用 wait释放lock锁 notify不释放锁 
+* 2.CountDownLatch做操作 
+* https://www.baidu.com/link?url=bQLDt5r-VYz3-_s57DWkzjJ8gSAPOAR5_FClT0M7SGxyZEURasQ3KNStc1gJo_hg&wd=&eqid=f9df43da00085f99000000065cd0e0f8
+*   </p>
+* @date 2019年5月7日 上午9:32:00  
+*
  */
 public class ListAdd2 {
 	private volatile static List list = new ArrayList();	
@@ -73,6 +79,7 @@ public class ListAdd2 {
 			}
 		}, "t2");	
 		
+		//前后是有顺序的 
 		t2.start();
 		t1.start();
 		
