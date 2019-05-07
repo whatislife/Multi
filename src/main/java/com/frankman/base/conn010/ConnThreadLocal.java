@@ -1,5 +1,11 @@
 package com.frankman.base.conn010;
-
+/**
+ * 
+* @ClassName: ConnThreadLocal  
+* <p>Description: ThreadLocal线程独立共享的   </p>
+* @date 2019年5月5日 下午4:18:24  
+*
+ */
 public class ConnThreadLocal {
 
 	public static ThreadLocal<String> th = new ThreadLocal<String>();
@@ -10,7 +16,6 @@ public class ConnThreadLocal {
 	public void getTh(){
 		System.out.println(Thread.currentThread().getName() + ":" + this.th.get());
 	}
-	
 	public static void main(String[] args) throws InterruptedException {
 		
 		final ConnThreadLocal ct = new ConnThreadLocal();
