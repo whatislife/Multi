@@ -1,7 +1,6 @@
 package com.frankman.base.sync005;
 /**
- * synchronized的重入
- * @author alienware
+ * synchronized的重入 父子类锁重复也是线程安全的 
  *
  */
 public class SyncDubbo2 {

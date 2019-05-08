@@ -1,7 +1,6 @@
 package com.frankman.base.sync005;
 /**
- * synchronized的重入
- * @author alienware
+ * synchronized的重入 多个方法连续调用 线程是安全的 
  *
  */
 public class SyncDubbo1 {

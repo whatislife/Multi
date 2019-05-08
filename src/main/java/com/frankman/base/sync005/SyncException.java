@@ -1,7 +1,6 @@
 package com.frankman.base.sync005;
 /**
- * synchronized异常
- * @author alienware
+ * synchronized异常  可以20个任务全部停止，也可以继续执行添加日志记录 
  *
  */
 public class SyncException {
@@ -17,8 +16,11 @@ public class SyncException {
 					//Integer.parseInt("a");
 					throw new RuntimeException();
 				}
-			} catch (InterruptedException e) {
+			} catch (Exception e) {//InterruptedException
 				e.printStackTrace();
+				//System.out.println("记录日志"+i);
+				//throw new RuntimeException();//抛出运行时异常 整体打断 或者 intercept
+				//continue;
 			}
 		}
 	}

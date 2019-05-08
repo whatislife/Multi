@@ -2,12 +2,11 @@ package com.frankman.base.sync003;
 
 /**
  * 对象锁的同步和异步问题
- * @author alienware
- *
+ *原子性 、可见性 
  */
 public class MyObject {
 
-	public synchronized void method1(){
+	public  synchronized void method1(){
 		try {
 			System.out.println(Thread.currentThread().getName());
 			Thread.sleep(4000);
@@ -16,8 +15,8 @@ public class MyObject {
 		}
 	}
 	
-	/** synchronized */
-	public void method2(){
+	/** synchronized */  //异步方法，不添加synchronized
+	public  void method2(){
 			System.out.println(Thread.currentThread().getName());
 	}
 	

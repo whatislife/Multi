@@ -1,6 +1,6 @@
 package com.frankman.base.sync006;
 /**
- * synchronized代码块对字符串的锁，注意String常量池的缓存功能
+ * synchronized代码块对字符串的锁，注意String常量池的缓存功能 修改了就是另一个锁了但是new String这种是可以的 
  * @author alienware
  *
  */

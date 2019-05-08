@@ -1,6 +1,6 @@
 package com.frankman.base.sync006;
 /**
- * 同一对象属性的修改不会影响锁的情况
+ * 同一对象属性的修改不会影响锁的情况  修改对象属性没问题 锁还存在 正常使用 
  * @author alienware
  *
  */

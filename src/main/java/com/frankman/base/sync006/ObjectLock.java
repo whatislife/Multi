@@ -1,7 +1,7 @@
 package com.frankman.base.sync006;
 
 /**
- * 使用synchronized代码块加锁,比较灵活
+ * 使用synchronized代码块加锁,比较灵活  几种方式 
  * @author alienware
  *
  */
@@ -17,6 +17,8 @@ public class ObjectLock {
 			}
 		}
 	}
+	
+	
 	
 	public void method2(){		//类锁
 		synchronized (ObjectLock.class) {

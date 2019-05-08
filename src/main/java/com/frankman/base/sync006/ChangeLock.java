@@ -1,7 +1,6 @@
 package com.frankman.base.sync006;
 /**
- * 锁对象的改变问题
- * @author alienware
+ * 锁对象的改变问题  修改了就是另一个锁
  *
  */
 public class ChangeLock {
