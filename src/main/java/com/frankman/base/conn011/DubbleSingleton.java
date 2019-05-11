@@ -1,5 +1,11 @@
 package com.frankman.base.conn011;
-
+/**
+ * 
+* @ClassName: DubbleSingleton  
+* <p>Description: 两层检测模式  </p>
+* @date 2019年5月11日 下午2:31:12  
+*
+ */
 public class DubbleSingleton {
 
 	private static DubbleSingleton ds;
