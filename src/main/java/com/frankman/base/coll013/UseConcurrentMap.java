@@ -5,7 +5,16 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
+/**
+ * 
+* @ClassName: UseConcurrentMap  
+* <p>Description:
+1.原始map怎么使用方式相同
+2. 
+  </p>
+* @date 2019年5月11日 下午4:12:05  
+*
+ */
 public class UseConcurrentMap {
 
 	public static void main(String[] args) {
