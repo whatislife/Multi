@@ -10,7 +10,21 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 
 
-
+/**
+ * 
+* @ClassName: UseThreadPoolExecutor1  
+* <p>Description: 线程池数据的使用   
+* 
+* 不同队列处理方式不同 
+* (1)有界队列   
+* (2)无界队列   除非系统资源耗尽，否则一直存储  第二个参数没有意义了 
+* 
+* 存在多种拒绝策略  4中默认策略 推荐自定义策略 
+*  new DiscardOldestPolicy()
+* </p>
+* @date 2019年5月14日 下午9:16:47  
+*
+ */
 public class UseThreadPoolExecutor1 {
 
 
@@ -22,17 +36,17 @@ public class UseThreadPoolExecutor1 {
 		 * 若线程数大于maximumPoolSize，则执行拒绝策略。或其他自定义方式。
 		 * 
 		 */	
+//		ThreadPoolExecutor poolss = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue)
 		ThreadPoolExecutor pool = new ThreadPoolExecutor(
 				1, 				//coreSize
 				2, 				//MaxSize
 				60, 			//60
 				TimeUnit.SECONDS, 
-				new ArrayBlockingQueue<Runnable>(3)			//指定一种队列 （有界队列）
+				new ArrayBlockingQueue<Runnable>(3)			//指定一种队列 （有界队列）  有界队列的使用 
 				//new LinkedBlockingQueue<Runnable>()
 				, new MyRejected()
 				//, new DiscardOldestPolicy()
 				);
-		
 		MyTask mt1 = new MyTask(1, "任务1");
 		MyTask mt2 = new MyTask(2, "任务2");
 		MyTask mt3 = new MyTask(3, "任务3");

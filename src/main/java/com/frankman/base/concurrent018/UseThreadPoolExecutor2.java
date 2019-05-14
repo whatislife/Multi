@@ -35,7 +35,7 @@ public class UseThreadPoolExecutor2 implements Runnable{
 					TimeUnit.SECONDS,
 					queue);
 		
-		for(int i = 0 ; i < 20; i++){
+		for(int i = 0 ; i < 2; i++){
 			executor.execute(new UseThreadPoolExecutor2());
 		}
 		Thread.sleep(1000);

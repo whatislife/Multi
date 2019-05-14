@@ -1,5 +1,11 @@
 package com.frankman.base.concurrent018;
-
+/**
+ * 
+* @ClassName: MyTask  
+* <p>Description: 任务处理   </p>
+* @date 2019年5月14日 下午9:13:26  
+*
+ */
 public class MyTask implements Runnable {
 
 	private int taskId;
