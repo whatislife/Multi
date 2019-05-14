@@ -4,7 +4,13 @@ import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-
+/**
+ * 
+* @ClassName: Provider  
+* <p>Description: 生产端的数据汇总   </p>
+* @date 2019年5月14日 下午1:52:12  
+*
+ */
 public class Provider implements Runnable{
 	
 	//共享缓存区

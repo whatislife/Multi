@@ -3,10 +3,17 @@ package com.frankman.base.design016;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * 
+* @ClassName: Consumer  
+* <p>Description: 消费端数据  </p>
+* @date 2019年5月14日 下午1:51:28  
+*
+ */
 public class Consumer implements Runnable{
 
 	private BlockingQueue<Data> queue;
+	
 	
 	public Consumer(BlockingQueue queue){
 		this.queue = queue;
@@ -17,6 +24,7 @@ public class Consumer implements Runnable{
 
 	@Override
 	public void run() {
+		//一直阻塞循环获取数据 
 		while(true){
 			try {
 				//获取数据

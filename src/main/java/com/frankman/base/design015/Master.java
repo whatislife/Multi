@@ -4,7 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
+/**
+ * 
+* @ClassName: Master  
+* <p>Description: 
+* 任务拆分执行 返回数据汇总 
+* </p>
+* @date 2019年5月14日 下午1:42:03  
+*
+ */
 public class Master {
 
 	//1 有一个盛放任务的容器
@@ -22,6 +30,7 @@ public class Master {
 		worker.setResultMap(this.resultMap);
 		
 		for(int i = 0; i < workerCount; i ++){
+			//分配 固定数量处理线程
 			this.workers.put(Integer.toString(i), new Thread(worker));
 		}
 		
@@ -57,6 +66,12 @@ public class Master {
 		}
 		return priceResult;
 	}
+
+	public void start(String name) {
+		System.out.println("任务开始执行了");
+		
+	}
+	
 	
 	
 	

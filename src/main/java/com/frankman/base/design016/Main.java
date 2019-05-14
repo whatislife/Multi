@@ -4,7 +4,13 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
-
+/**
+ * 
+* @ClassName: Main  
+* <p>Description: 生产者消费者数据模型  </p>
+* @date 2019年5月14日 下午1:53:59  
+*
+ */
 public class Main {
 
 	public static void main(String[] args) throws Exception {

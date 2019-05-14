@@ -1,5 +1,11 @@
 package com.frankman.base.design016;
-
+/**
+ * 
+* @ClassName: Data  
+* <p>Description: 传递的数据  </p>
+* @date 2019年5月14日 下午1:51:02  
+*
+ */
 public final class Data {
 
 	private String id;
