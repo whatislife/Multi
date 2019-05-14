@@ -8,7 +8,6 @@ import java.util.Vector;
 
 /**
  * 多线程使用Vector或者HashTable的示例（简单线程同步问题）
- * @author alienware
  */
 public class Tickets {
 
