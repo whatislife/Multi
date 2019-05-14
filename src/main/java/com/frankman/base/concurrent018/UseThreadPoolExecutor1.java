@@ -21,6 +21,10 @@ import java.util.concurrent.ThreadPoolExecutor.CallerRunsPolicy;
 * 
 * 存在多种拒绝策略  4中默认策略 推荐自定义策略 
 *  new DiscardOldestPolicy()
+*  
+*  
+*  假如数据中间有操作失败了 一定是数据高峰期 将数据记录日志 数据入库
+*  等后续CPU比较低的是 使用一个JOB重新推送、或者人工干预自动发送数据 
 * </p>
 * @date 2019年5月14日 下午9:16:47  
 *
