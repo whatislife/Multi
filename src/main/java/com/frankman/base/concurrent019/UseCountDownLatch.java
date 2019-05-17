@@ -1,7 +1,16 @@
 package com.frankman.base.concurrent019;
 
 import java.util.concurrent.CountDownLatch;
-
+/**
+ * 
+* @ClassName: UseCountDownLatch  
+* <p>Description: 
+await 开始等待
+等后续 countDown.countDown(); 次数达到 上边线程才会执行 
+</p>
+* @date 2019年5月17日 下午4:43:18  
+*
+ */
 public class UseCountDownLatch {
 
 	public static void main(String[] args) {
@@ -51,6 +60,21 @@ public class UseCountDownLatch {
 		t1.start();
 		t2.start();
 		t3.start();
+		
+		Thread t22 = new Thread(new Runnable(){
+			@Override 
+			public void run(){
+				try {
+					countDown.countDown();
+					countDown.await();
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+				
+			}
+			
+		});
+		
 		
 		
 		

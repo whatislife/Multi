@@ -5,7 +5,15 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
-
+/**
+ * 
+* @ClassName: UseFuture  
+* <p>Description: 
+* 异步获取结果，获取future获取的返回结果 
+* </p>
+* @date 2019年5月17日 下午9:20:12  
+*
+ */
 public class UseFuture implements Callable<String>{
 	private String para;
 	
@@ -38,6 +46,7 @@ public class UseFuture implements Callable<String>{
 		
 		Future f1 = executor.submit(future);		//单独启动一个线程去执行的
 		Future f2 = executor.submit(future2);
+
 		System.out.println("请求完毕");
 		
 		try {
@@ -52,6 +61,7 @@ public class UseFuture implements Callable<String>{
 		System.out.println("数据：" + future2.get());
 		
 		executor.shutdown();
+				
 	}
 
 }
