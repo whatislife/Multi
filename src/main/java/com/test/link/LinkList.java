@@ -3,6 +3,8 @@ package com.test.link;
  * 
  * @author songjian
  *   
+ *   
+ *   
  */
 //单向链表类
 public class LinkList implements List {
