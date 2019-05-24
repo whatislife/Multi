@@ -1,5 +1,9 @@
 package com.test.link;
-
+/**
+ * 
+ * @author Administrator
+ *
+ */
 //单向链表类
 public class LinkList implements List {
 
