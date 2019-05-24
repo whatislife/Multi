@@ -1,7 +1,7 @@
 package com.test.link;
 /**
  * 
- * @author Administrator
+ * @author songjian
  *
  */
 //单向链表类
