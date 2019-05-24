@@ -48,6 +48,8 @@ public class LinkList implements List {
       //判断链表是否为空
       if(isEmpty())
       {
+    	  
+    	  
           throw new Exception("链表为空，无法删除！");
       }
       if(index <0 ||index >size)
