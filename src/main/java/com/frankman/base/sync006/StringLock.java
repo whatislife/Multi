@@ -8,6 +8,7 @@ public class StringLock {
 
 	public void method() {
 		//new String("字符串常量")
+		String name = "字符串常量";
 		synchronized ("字符串常量") {
 			try {
 				while(true){
