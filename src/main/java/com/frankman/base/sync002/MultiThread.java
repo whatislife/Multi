@@ -8,8 +8,12 @@ package com.frankman.base.sync002;
  */
 public class MultiThread {
 
-	private int num = 0;
 	
+	private static MultiThread sonw = new MultiThread();
+	private static int num = 0;
+	public static void printN(String tag){
+		sonw.printNum(tag);
+	}
 	/** static */
 	public  synchronized void printNum(String tag){
 		try {
@@ -40,14 +44,14 @@ public class MultiThread {
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				m1.printNum("a");
+				m1.printN("a");
 			}
 		});
 		
 		Thread t2 = new Thread(new Runnable() {
 			@Override 
 			public void run() {
-				m2.printNum("b");
+				m2.printN("b");
 			}
 		});		
 		
