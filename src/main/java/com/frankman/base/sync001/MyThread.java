@@ -15,7 +15,7 @@ public class MyThread extends Thread{
 	private int count = 5 ;
 	
 	//synchronized加锁   添加在方法是对象锁，添加static 是类锁 
-	public  void  run(){
+	public  synchronized void  run(){
 		count--;
 		System.out.println(this.currentThread().getName() + " count = "+ count);
 	}
