@@ -7,7 +7,9 @@ public class TestSingleLinkedList{
 	    singleList.addHead("B");
 	    singleList.addHead("C");
 	    singleList.addHead("D");
-	    singleList.addHead("A");
+	    //singleList.addHead("A");
+	    
+	    singleList.addLast("W");
 	    //打印当前链表信息
 	    singleList.display();
 	    //删除C

@@ -42,6 +42,41 @@ public class SingleLinkedList {
         return obj;
     }
     
+    public Object addLast(Object obj){
+    	Node newHead = new Node(obj);
+    	if(size == 0){
+    		head = newHead;
+    	}else{
+    		/*Node nodeLast = head;
+    		Node pre = head;//记录前一个节点 
+    		//System.out.println("头结点是："+nodeLast.data);
+    		while(nodeLast.next!=null){
+    			//System.out.println("====="+nodeLast.data);
+    			pre = nodeLast;
+    			nodeLast = nodeLast.next;
+    		}
+    		pre.next = newHead;
+    		*/
+    		Node pre = getLastNode();
+    		pre.next = newHead;
+    		
+    	}
+    	size++;
+    	return obj;
+    }
+    
+    public Node getLastNode(){
+    	Node nodeLast = head;
+    	if(size==0){
+    		return null;
+    	}else{
+    		while(nodeLast.next!=null){
+        		nodeLast = nodeLast.next;
+        	}
+    	}
+    	return nodeLast;
+    }
+    
     //在链表头删除元素
     public Object deleteHead(){
         Object obj = head.data;
