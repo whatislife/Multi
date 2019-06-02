@@ -45,30 +45,32 @@ public class LinkList {
 		}
 		return lastNode;
 	}
-	public void delete(Object obj){
+	public Boolean delete(Object obj){
 		if(size ==0){
-			
-		}else{
-			Node currentNode = head;
-			Node preNode = head;
-			//1.找到这个节点 
-			//2.删除
-			while(currentNode.obj != obj){
-			    preNode = currentNode;
-			    currentNode = currentNode.next;
-			}
-			System.out.println("当前节点-"+currentNode.obj);
-			if(currentNode == head){
-				//如果是头结点 
-				head = currentNode.next;
-				size--;
-			}else{
-				//删除本节点
-				preNode.next= currentNode.next;
-				size--;
-			}
+			return false;
 		}
-			
+		Node currentNode = head;
+		Node preNode = head;
+		//1.找到这个节点 
+		//2.删除
+		while(currentNode.obj != obj){
+			if(currentNode.next==null){//最后一个节点了
+				return false;
+			}
+		    preNode = currentNode;
+		    currentNode = currentNode.next;
+		}
+		System.out.println("当前节点-"+currentNode.obj);
+		if(currentNode == head){
+			//如果是头结点 
+			head = currentNode.next;
+			size--;
+		}else{
+			//删除本节点
+			preNode.next= currentNode.next;
+			size--;
+		}
+		return true;	
 		
 	}
 	public void disPlay(){

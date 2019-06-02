@@ -5,7 +5,17 @@
 斐波纳契数列以如下被以递推的方法定义：
 F(0)=0，F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n>=3，n∈N*）
 用java语言实现一个算法 并输出前10000个数的值 
+
+递归数据
+地推数据
+
 2.变成实现一个简单的阻塞队列
+LinkList<Object>
+maxsize
+minsize
+AutomicInteger  incrementAndGet decrementAndGet volatile
+Object lock = new Objec();
+synchronized(lock)//lock锁
 3.变成实现一个Hashmap (不考虑动态伸缩问题)
 4.什么是CopyOnWrite容器
 读写分离的容器
