@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
 /**
  * 
 * @ClassName: UseFuture  
@@ -57,8 +58,14 @@ public class UseFuture implements Callable<String>{
 			e.printStackTrace();
 		}
 		//调用获取数据方法,如果call()方法没有执行完成,则依然会进行等待
-		System.out.println("数据：" + future.get());
-		System.out.println("数据：" + future2.get());
+		try {
+			System.out.println("数据：" + future.get(3,TimeUnit.SECONDS));
+			System.out.println("数据：" + future2.get());
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("数据异常 "+e);
+		}
+		
 		
 		executor.shutdown();
 				
