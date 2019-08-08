@@ -32,7 +32,7 @@ public class SyncWrite {
 		try {
 			//channel.writeAndFlush(request.getCommand().getMessage());
 			//log.info("success async send request to park: {}", request.getCommand().getMessage());
-			//业务处理 
+			//业务处理 tcp 推送 
 			System.out.println("channel=========数据:"+channel);
 		} catch (Exception e) {
 			//SyncWriteMap.syncKey.remove(writeFuture.requestId());

@@ -21,7 +21,7 @@ public class TestReq {
 			}
 		},"t2");
 		t1.start();
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		t2.start();
 	}
 	private static void end(){
@@ -61,7 +61,7 @@ public class TestReq {
 		//等待数据结果
 		AsyncResponse asyncResponse = null;
 		try {
-			asyncResponse = response.get(6, TimeUnit.SECONDS);
+			asyncResponse = response.get(10, TimeUnit.SECONDS);
 			if(asyncResponse==null){
 				if (response.isTimeout()) {
 					SyncWriteMap.syncKey.remove(response.requestId());
