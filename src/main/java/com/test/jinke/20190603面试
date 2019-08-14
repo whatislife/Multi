@@ -1,0 +1,15 @@
+1.事物的传播属性、隔离级别
+2.mybatis和template区别
+3.netty集群构建
+lvs hal
+p2p方式 提供生产消费
+redis路由ip地址存储
+4.dubbo容错
+分布式事物处理
+5.高并发解决方案
+6.什么情况使用synchronized
+阻塞度列的使用 put 保证数据的顺序 
+雪花算法的使用  方法级别的synchronized 保证唯一行 加锁 
+7.springmvc 返回的数据时string @ResponseBody @RequestMapping @Controller @
+8.hashmap和concurrentHashMap区别 
+9.
