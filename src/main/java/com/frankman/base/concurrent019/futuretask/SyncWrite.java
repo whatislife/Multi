@@ -18,7 +18,8 @@ public class SyncWrite {
 		if (future != null){
 			return future;
 		}
-		future = new SyncWriteFuture(request.getRequestId());
+//		future = new SyncWriteFuture(request.getRequestId(),6*1000);//设置超时判断
+		future = new SyncWriteFuture(request.getRequestId());//不设置超时判断
 		SyncWriteMap.syncKey.put(request.getRequestId(), future);
 		System.out.println("request cache size:{}"+SyncWriteMap.syncKey.size());
 		doWriteAndSync(channel, request, future);

@@ -21,7 +21,7 @@ public class TestReq {
 			}
 		},"t2");
 		t1.start();
-		Thread.sleep(8000);
+		Thread.sleep(1000);
 		t2.start();
 	}
 	private static void end(){
@@ -30,10 +30,11 @@ public class TestReq {
 		if (future != null) {
 			AsyncResponse response = new AsyncResponse();
 			response.setRequestId(requestId);
-			response.setReponse("你好我的名字叫frankman ");
-			future.setResponse(response);
+			response.setReponse("你好我的名字叫frankman333 ");
+//			future.setResponse(null);//设置超时判断
+			future.setResponse(response);//不设置超时判断
 			future.setWriteResult(true);
-			SyncWriteMap.syncKey.put(requestId, future);	
+		//	SyncWriteMap.syncKey.put(requestId, future);	
 		}
 	}
 	
@@ -61,7 +62,7 @@ public class TestReq {
 		//等待数据结果
 		AsyncResponse asyncResponse = null;
 		try {
-			asyncResponse = response.get(10, TimeUnit.SECONDS);
+			asyncResponse = response.get(6, TimeUnit.SECONDS);
 			if(asyncResponse==null){
 				if (response.isTimeout()) {
 					SyncWriteMap.syncKey.remove(response.requestId());
