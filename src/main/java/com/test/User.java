@@ -4,7 +4,7 @@ import java.util.List;
 
 public class User {
 	private String name ; 
-	private String pwd8;
+	private String pwd82;
 	private String pwd ; 
 	List<User> list ; 
 	
