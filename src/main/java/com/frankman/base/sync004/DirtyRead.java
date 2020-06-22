@@ -1,6 +1,9 @@
 package com.frankman.base.sync004;
 /**
  * 业务整体需要使用完整的synchronized，保持业务的原子性。
+ * 主要线程数
+ * 1.主线程 睡眠1s ， 之后执行getValue
+ * 2.t1线程 执行run方法，调用setvalue需要时间
  *
  */
 public class DirtyRead {
@@ -21,8 +24,8 @@ public class DirtyRead {
 		
 		System.out.println("setValue最终结果：username = " + username + " , password = " + password);
 	}
-	
-	public void getValue(){
+	//都需要添加synchronized getValue需要等待setvalue结果
+	public  void getValue(){
 		System.out.println("getValue方法得到：username = " + this.username + " , password = " + this.password);
 	}
 	

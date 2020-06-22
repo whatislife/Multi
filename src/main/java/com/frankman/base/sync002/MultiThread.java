@@ -2,18 +2,20 @@ package com.frankman.base.sync002;
 /**
  * 关键字synchronized取得的锁都是对象锁，而不是把一段代码（方法）当做锁，
  * 所以代码中哪个线程先执行synchronized关键字的方法，哪个线程就持有该方法所属对象的锁（Lock），
- * 
- * 在静态方法上加synchronized关键字，表示锁定.class类，类一级别的锁（独占.class类）。
+ * 1.非静态static方法上是对象级别的锁 synchronized
+ * 2.在静态static方法上加synchronized关键字，表示锁定.class类，类一级别的锁（独占.class类）。
  *
+ *一个对象一把锁， m1是m1的锁，m2是m2的锁，不是同一把锁 
+ *静态static上添加synchronized是类级别的锁   
  */
 public class MultiThread {
 
 	
-	private static MultiThread sonw = new MultiThread();
-	private static int num = 0;
-	public static void printN(String tag){
-		sonw.printNum(tag);
-	}
+//	private static MultiThread sonw = new MultiThread();
+	private /*static*/ int num = 0;
+//	public /*static*/ void printN(String tag){
+//		sonw.printNum(tag);
+//	}
 	/** static */
 	public  synchronized void printNum(String tag){
 		try {
@@ -44,14 +46,14 @@ public class MultiThread {
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				m1.printN("a");
+				m1.printNum("a");
 			}
 		});
 		
 		Thread t2 = new Thread(new Runnable() {
 			@Override 
 			public void run() {
-				m2.printN("b");
+				m2.printNum("b");
 			}
 		});		
 		

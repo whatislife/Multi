@@ -28,6 +28,7 @@ public class MyObject {
 		 * 分析：
 		 * t1线程先持有object对象的Lock锁，t2线程可以以异步的方式调用对象中的非synchronized修饰的方法
 		 * t1线程先持有object对象的Lock锁，t2线程如果在这个时候调用对象中的同步（synchronized）方法则需等待，也就是同步
+		 * 总结的很具体 超赞 
 		 */
 		Thread t1 = new Thread(new Runnable() {
 			@Override
